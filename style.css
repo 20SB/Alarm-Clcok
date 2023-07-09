@@ -1,0 +1,373 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Apply flex */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* design Body */
+body {
+  min-height: 100vh;
+  background: rgb(86, 145, 224);
+  background: radial-gradient(circle, rgb(235 215 206) 19%, rgb(175 0 255) 73%);
+}
+
+/* welcome screen */
+.welcomeScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcomeScreen div {
+  width: 50vw;
+  height: 30vw;
+}
+.welcomeScreen #liveClock-iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+
+/* Main Container */
+.wrapper {
+  width: 440px;
+  background: rgb(134, 223, 224);
+  background: linear-gradient(0deg, rgb(0 252 255) 20%, rgb(0 151 255) 74%);
+  position: relative;
+  padding: 2.5rem;
+  flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+}
+
+/* Heading */
+#alarmClockHeading1,
+#alarmClockHeading2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* hide heading 1 on big screen */
+#alarmClockHeading1 {
+  display: none;
+}
+
+/* live Analog clock */
+.analog-clk {
+  width: 350px;
+  height: 210px;
+  position: relative;
+}
+.analog-clk img {
+  position: absolute;
+  width: 210px;
+  left: 70px;
+  top: 8px;
+}
+.wrapper #liveClock-iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+
+/* Digital Time text */
+.wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 2.5rem 0;
+}
+
+/* Main content */
+.wrapper .content {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+/* Disable content menu */
+.wrapper .content.disable {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Hour Minute AM/PM section */
+.content .inp {
+  border-radius: 5px;
+  border: 1px solid #999;
+  width: calc(100% / 3 - 5px);
+}
+
+.content .inp select {
+  outline: none;
+  border: none;
+  height: 53px;
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 10px;
+  cursor: pointer;
+  background-color: rgb(218, 239, 244);
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Buttons Design */
+#resumeBtn {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: brown;
+  background-color: rgb(198 40 40);
+  padding: 1rem 0;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+}
+.botn {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: brown;
+  background-color: rgb(198 40 40);
+  padding: 1rem 0;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  font-family: monospace;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+/* buttons on hover effect */
+.botn:hover {
+  font-weight: 600;
+  transform: scale(1.05);
+}
+
+/* Click effect on button */
+.wrapper button:active,
+#resumeBtn:active {
+  background-color: rgb(21, 255, 0);
+  font-size: 1.2rem;
+}
+
+/* Resume button */
+#resumeBtn {
+  background-color: rgb(9, 107, 255);
+  width: 200px;
+  box-shadow: 1px 1px 2px 2px black;
+}
+#resumeBtn:hover {
+  transform: scale(1.1);
+  font-weight: 600;
+}
+
+/* Welcome Back Screen */
+.welcomeBack {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(86, 145, 224);
+  background: radial-gradient(
+    circle,
+    rgba(86, 145, 224, 1) 17%,
+    rgba(0, 117, 255, 1) 73%
+  );
+  z-index: 10;
+  flex-direction: column;
+}
+
+/* no display class design */
+.disp-none {
+  display: none;
+}
+
+/* right div on big screen */
+#alarmListcont {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  right: -75%;
+  top: 0px;
+  background: linear-gradient(0deg, rgb(0 252 255) 20%, rgb(251 255 0) 74%);
+  padding: 2.5rem;
+  flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+}
+
+/* design lists of alarms set */
+#alarmsList {
+  width: 100%;
+  height: 445px;
+  overflow-y: scroll;
+}
+#alarmsList li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  margin-left: 0;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+/* Scrollbar design */
+.scrolling-content::-webkit-scrollbar-track {
+  margin: 3px 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.scrolling-content::-webkit-scrollbar {
+  width: 15px;
+}
+.scrolling-content::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+.scrolling-content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  background-color: #d55959;
+  margin: 3px 0;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* time container in alarms list */
+.time-container {
+  width: 100%;
+  padding-left: 14px;
+  border-radius: 15px;
+}
+
+/* delete icon in alarm list */
+.delete-icon {
+  font-size: 28px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 5px;
+  display: flex;
+  height: 25px;
+  width: 25px;
+}
+.delete-icon:hover {
+  border-radius: 50%;
+  background-color: #faf9f978;
+  box-shadow: 0px 0px 8px 0px rgb(255, 0, 0);
+}
+.time-container:has(+ .delete-icon:hover) {
+  background-color: #faf9f978;
+  box-shadow: 0px 0px 8px 0px rgb(255, 0, 0);
+}
+
+/* design shake animation class to be added on clock while alarm is playing */
+.shake-animation {
+  animation: shake 0.1s ease-in-out infinite;
+}
+
+/* left Div on big screen*/
+#leftDiv {
+  width: 300px;
+  height: 560px;
+  position: absolute;
+  left: -75%;
+  top: 0px;
+  background: linear-gradient(0deg, rgb(0 252 255) 20%, rgb(251 255 0) 74%);
+  padding: 2.5rem;
+  flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+}
+
+/* Quote container */
+#msgContainer {
+  font-family: cursive;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Count down container */
+#counterContainer {
+  background-color: #faf9f978;
+  box-shadow: 0px 0px 8px 0px rgb(255, 0, 0);
+  text-align: center;
+  border-radius: 15px;
+  padding: 7px;
+  margin: 20px 0px;
+}
+
+/* animation key farmes */
+@keyframes shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 95vw;
+    background-color: red;
+  }
+  .welcomeBack {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 1110px) {
+  #alarmListcont {
+    position: initial;
+    box-shadow: none;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 5px;
+    margin: 20px;
+  }
+  #alarmsList {
+    max-height: 310px;
+  }
+  #leftDiv {
+    height: auto;
+    position: initial;
+    box-shadow: none;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 0;
+  }
+  #alarmClockHeading1 {
+    display: block;
+  }
+  #alarmClockHeading2 {
+    display: none;
+  }
+  #msgContainer {
+    display: none;
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <!--  Favicon    -->
+    <link rel="shortcut icon" href="./files/alarm.png" type="image/x-icon" />
+    <!--   CSS   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex">
+    <!-- Welcome Back screen -->
+    <div class="welcomeScreen" id="welcomeBack">
+      <h1 style="text-align: center">Hey! Welcome Dear</h1>
+      <!-- Add live Analog Clock -->
+      <div>
+        <iframe src="live clock/index.html" id="liveClock-iframe"></iframe>
+      </div>
+      <!-- resume button to continue to main screen -->
+      <button id="resumeBtn">Proceed to Alarm</button>
+    </div>
+
+    <!-- Main container -->
+    <div class="wrapper flex disp-none" id="alarmContainer">
+      <!-- Heading -->
+      <h2 id="alarmClockHeading1">ALARM CLOCK</h2>
+      <!-- Add live Analog Clock -->
+      <div class="analog-clk">
+        <img class="clock-layout" src="./files/clock-layout.png" alt="" />
+        <iframe src="live clock/index.html" id="liveClock-iframe"></iframe>
+      </div>
+
+      <!-- Add digital clock -->
+      <h1 id="currentTime">00:00:00</h1>
+      <!-- Main content -->
+      <div id="content">
+        <!-- Hour section -->
+        <div class="inp">
+          <select id="hour">
+            <option value="Hour" selected hidden>Hour</option>
+          </select>
+        </div>
+        <!-- Minute Section -->
+        <div class="inp">
+          <select id="minute">
+            <option value="Minute" selected hidden>Minute</option>
+          </select>
+        </div>
+        <!-- AM/PM section -->
+        <div class="inp">
+          <select id="ampm">
+            <option value="AM/PM" selected hidden>AM/PM</option>
+          </select>
+        </div>
+      </div>
+      <!-- Set alarm setting Button -->
+      <button class="botn" id="setBtn"></button>
+
+      <!-- container to store extra buttons as stop alarm, snooze alarm and counter msg -->
+      <div id="leftDiv">
+        <!-- Heading of alarm on big screen -->
+        <h2 id="alarmClockHeading2">ALARM CLOCK</h2>
+        <!-- alarm quote to be displayed on big screen -->
+        <div id="msgContainer">
+          "From waking dreams to timely reminders, I am the faithful sentinel of
+          your moments. With each gentle chime, I weave reminders and
+          possibilities, guiding you through life's rhythm and orchestrating
+          your journey."
+        </div>
+        <!-- Counter while playing alarm or snooze alarm function -->
+        <div id="counterContainer">
+          <span id="countertext"></span>
+          <span id="counter"></span>
+        </div>
+        <!-- stop and snooze btn -->
+        <div class="buttons">
+          <button class="botn disp-none" id="stopBtn">Stop Alarm</button>
+          <button class="botn disp-none" id="snoozeBtn">Snooze</button>
+        </div>
+      </div>
+
+      <!-- Alarms list -->
+      <div id="alarmListcont">
+        <h2>Alarms set at:</h2>
+        <ul class="scrolling-content" id="alarmsList">
+          <li>
+            <!-- show the time alarm set at-->
+            <span class="time-container">8:00 AM</span>
+            <!-- delete button deleting the alarm -->
+            <span class="delete-icon"
+              ><img src="./files/dlt-icon.svg" alt="delete"
+            /></span>
+          </li>
+          <li>
+            <!-- show the time alarm set at-->
+            <span class="time-container">12:30 PM</span>
+            <!-- delete button deleting the alarm -->
+            <span class="delete-icon"
+              ><img src="./files/dlt-icon.svg" alt="delete"
+            /></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
