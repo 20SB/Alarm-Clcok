@@ -41,7 +41,7 @@ It is  Coding Ninjas Skill Test Project for Front-End. Please visit the Coding N
 
 ## Author
 
-- LinkedIn - [Subha Biswal](https://github.com/20SB)
+- Github - [Subha Biswal](https://github.com/20SB)
 
 
 ## Acknowledgments
